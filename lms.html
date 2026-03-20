@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Management Software | Slentra</title>
+    <style>
+        :root {
+            --bg: #f6f8ff;
+            --card: #ffffff;
+            --text: #1c1f2b;
+            --muted: #5a6178;
+            --accent: #4f46e5;
+            --shadow: rgba(16, 24, 40, 0.08);
+            --radius: 16px;
+            --max: 1040px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: linear-gradient(180deg, #f6f8ff 0%, #ffffff 60%);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        main {
+            width: min(92%, var(--max));
+            margin: 0 auto;
+            padding: 48px 0 80px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0 32px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.4rem;
+            letter-spacing: -0.02em;
+            color: #232585;
+        }
+
+        header p {
+            margin: 18px auto 0;
+            max-width: 720px;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .hero {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: 1fr;
+            margin-top: 40px;
+        }
+
+        @media (min-width: 880px) {
+            .hero {
+                grid-template-columns: 1.05fr 0.85fr;
+                align-items: center;
+            }
+        }
+
+        .hero-text {
+            padding: 28px 24px;
+            background: var(--card);
+            box-shadow: 0 16px 32px var(--shadow);
+            border: 1px solid rgba(97, 110, 128, 0.12);
+        }
+
+        .hero-text h2 {
+            margin-top: 0;
+            font-size: 1.7rem;
+        }
+
+        .hero-text ul {
+            padding-left: 1.2rem;
+            margin: 18px 0;
+            list-style-type: disc;
+        }
+
+        .hero-text li {
+            margin: 10px 0;
+        }
+
+        .hero-graphic {
+            padding: 28px 24px;
+            border-radius: var(--radius);
+            background: linear-gradient(130deg, rgba(79, 70, 229, 0.06), rgba(16, 185, 129, 0.04));
+            border: 1px solid rgba(79, 70, 229, 0.15);
+            box-shadow: 0 16px 32px var(--shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-graphic svg {
+            width: 100%;
+            max-width: 340px;
+            height: auto;
+        }
+
+        .section {
+            margin-top: 56px;
+        }
+
+        .section h3 {
+            margin-top: 0;
+            font-size: 1.55rem;
+            letter-spacing: -0.01em;
+        }
+
+
+
+        .card h2 {
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #232585;
+        }
+
+        @media (max-width: 768px) {
+            .card h2 {
+                font-size: 28px;
+            }
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #f1f5f9;
+            padding: 30px;
+            transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: #7186a1;
+            color: white;
+        }
+
+        .card h4 {
+            margin-bottom: 10px;
+            color: #232585;
+        }
+
+
+        .footer {
+            background: #1e293b;
+            color: #f1f5f9;
+            padding: 50px 20px 25px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer h3,
+        .footer h4 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .footer p {
+            margin-bottom: 6px;
+            color: rgba(241, 245, 249, 0.85);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: rgba(241, 245, 249, 0.7);
+        }
+
+        @media (max-width:768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Class Management Software</h1>
+            <h3>Centralize attendance, communication, and scheduling</h3>
+            <p>Build trust with parents, keep staff aligned, and make day-to-day operations effortless with a single,
+                modern platform.</p>
+        </header>
+
+        <section class="hero">
+            <article class="hero-text">
+                <h2>Why it works better than traditional school management tools</h2>
+                <ul>
+                    <li><strong>Real-Time SMS Notifications</strong> – Unlike app-based systems, SMS alerts ensure every
+                        parent and supervisor stays informed instantly.</li>
+                    <li><strong>Fingerprint-Based Attendance</strong> – Provides accurate, tamper-proof tracking for
+                        students and staff.</li>
+                    <li><strong>Integrated Teacher & Class Management</strong> – Combines scheduling, attendance, and
+                        class allocation in one system.</li>
+                    <li><strong>Comprehensive Communication Tools</strong> – From attendance alerts to SMS campaigns and
+                        birthday wishes, the system keeps everyone connected without extra effort.</li>
+                    <li><strong>All-in-One Solution</strong> – Reduces dependency on multiple platforms or manual
+                        tracking, making centre operations smoother and more transparent.</li>
+                </ul>
+            </article>
+
+            <aside class="hero-graphic" aria-hidden="true">
+                <svg viewBox="0 0 640 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.65" />
+                            <stop offset="100%" stop-color="#10B981" stop-opacity="0.35" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="24" y="32" width="592" height="448" rx="32" fill="url(#grad)" />
+                    <path d="M200 136h240v24H200z" fill="#fff" opacity="0.9" />
+                    <path d="M192 208h256v24H192z" fill="#fff" opacity="0.9" />
+                    <path d="M192 280h256v24H192z" fill="#fff" opacity="0.9" />
+                    <path d="M192 352h256v24H192z" fill="#fff" opacity="0.9" />
+                    <circle cx="160" cy="176" r="28" fill="#fff" opacity="0.92" />
+                    <path d="M138 248c0-17.4 13.4-31 30-31s30 13.6 30 31v72H138v-72z" fill="#fff" opacity="0.92" />
+                    <path d="M426 344c0-17.4 13.4-31 30-31s30 13.6 30 31v40h-60v-40z" fill="#fff" opacity="0.92" />
+                    <path d="M446 212c0 18.2-14.8 33-33 33s-33-14.8-33-33 14.8-33 33-33 33 14.8 33 33z" fill="#fff"
+                        opacity="0.92" />
+                </svg>
+            </aside>
+        </section>
+
+        <section class="section">
+            <h3>Key benefits for administrators, teachers, and parents</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <h4>Save time on daily administration</h4>
+                    <p>Automated attendance, alerts, and reporting reduce manual work so staff can focus on teaching and
+                        student support.</p>
+                </div>
+                <div class="card">
+                    <h4>Keep parents and supervisors updated automatically</h4>
+                    <p>SMS notifications share real-time attendance, schedule updates, and reminders without requiring
+                        additional apps.</p>
+                </div>
+                <div class="card">
+                    <h4>Improve staff accountability and scheduling efficiency</h4>
+                    <p>Biometric attendance and integrated class management ensure everyone is where they should be,
+                        when they should be.</p>
+                </div>
+                <div class="card">
+                    <h4>Boost student engagement and parental satisfaction</h4>
+                    <p>Personalized messages, event reminders, and attendance summaries keep families connected and
+                        involved.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>Designed to help learning centres and training institutes scale - without sacrificing transparency or
+                trust.</p>
+        </footer>
+    </main>
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div>
+                <h3>Slentra</h3>
+                <p>Modern software solutions that help teams work smarter.</p>
+                <p>In partnership with <strong>SL Robotics</strong> and <strong>ABC</strong>.</p>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p>Colombo, Sri Lanka</p>
+                <p>info@slentra.com</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Slentra — All rights reserved.</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
