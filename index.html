@@ -177,9 +177,16 @@
         }
 
         .feature-card {
-            background: #f1f5f9;
+            background: #b7c8da;
             padding: 30px;
-            transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+            transition: transform 0.6s ease, opacity 0.6s ease, background 0.3s ease, color 0.3s ease;
+            transform: translateY(30px);
+            opacity: 0;
+        }
+
+        .feature-card.animate {
+            transform: translateY(0);
+            opacity: 1;
         }
 
         .feature-card:hover {
@@ -366,7 +373,7 @@
                 </div>
 
                 <ul>
-                    <li><a href="#products">Products</a></li>
+                    <li><a href="#products#f1f5f9">Products</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -439,7 +446,7 @@
                         <h3>Class Management</h3>
                         <p>Manage students and teachers efficiently</p>
                         <div class="price">$149/month</div>
-                        <a class="product-btn">Learn More</a>
+                        <a class="product-btn" href="lms.html">Learn More</a>
                     </div>
                 </div>
 
@@ -520,6 +527,24 @@
         </div>
 
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.feature-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            cards.forEach(card => observer.observe(card));
+        });
+    </script>
 
 </body>
 
