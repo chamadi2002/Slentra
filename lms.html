@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class Management Software | Slentra</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         :root {
             --bg: #f6f8ff;
             --card: #ffffff;
@@ -21,9 +27,9 @@
             box-sizing: border-box;
         }
 
+
         body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(180deg, #f6f8ff 0%, #ffffff 60%);
             color: var(--text);
             line-height: 1.6;
@@ -35,24 +41,96 @@
             padding: 48px 0 80px;
         }
 
+
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+
+
         header {
+            background: linear-gradient(135deg, #6366f1, #9333ea);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .logo {
+                order: -1;
+            }
+        }
+
+        .heading {
             text-align: center;
             padding: 40px 0 32px;
         }
 
-        header h1 {
+        .heading h1 {
             margin: 0;
             font-size: 2.4rem;
             letter-spacing: -0.02em;
             color: #232585;
         }
 
-        header p {
+        .heading p {
             margin: 18px auto 0;
             max-width: 720px;
             color: var(--muted);
             font-size: 1.05rem;
         }
+
 
         .hero {
             display: grid;
@@ -135,6 +213,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 25px;
+            margin: 10px 10px;
         }
 
         .card {
@@ -198,13 +277,33 @@
 </head>
 
 <body>
+    <header>
+        <div class="container">
+            <nav>
+
+                <div class="logo">
+                    <img src="Capture.JPG" alt="Slentra logo">
+                    <h1>Slentra</h1>
+                </div>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
     <main>
-        <header>
+        <div class="heading">
             <h1>Class Management Software</h1>
             <h3>Centralize attendance, communication, and scheduling</h3>
             <p>Build trust with parents, keep staff aligned, and make day-to-day operations effortless with a single,
                 modern platform.</p>
-        </header>
+        </div>
 
         <section class="hero">
             <article class="hero-text">
@@ -273,8 +372,8 @@
         </section>
 
         <footer>
-            <p>Designed to help learning centres and training institutes scale - without sacrificing transparency or
-                trust.</p>
+            <p>Designed to help learning centres and training institutes scale while maintaining transparency and trust.
+            </p>
         </footer>
     </main>
     <footer class="footer">
