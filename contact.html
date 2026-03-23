@@ -127,7 +127,7 @@
         <h2>CONTACT US</h2>
         <p class="intro-text">Have questions? We'd love to hear from you. Send us a message!</p>
 
-        <form action="mailto:contact@slentra.com" method="POST" enctype="text/plain">
+        <form id="contactForm" onsubmit="return false;">
             <div class="form-group">
                 <label for="name">Full Name </label>
                 <input type="text" id="name" name="name" required>
@@ -148,8 +148,31 @@
                 <textarea id="message" name="message" required></textarea>
             </div>
 
-            <button type="submit">Send Message</button>
+            <button type="button" id="sendBtn">Send Message</button>
         </form>
+
+        <script>
+            document.getElementById('sendBtn').addEventListener('click', function () {
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const subject = document.getElementById('subject').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                if (!name || !email || !subject || !message) {
+                    alert('Please fill out all fields before sending.');
+                    return;
+                }
+
+                const to = 'contact@slentra.com';
+                const encodedSubject = encodeURIComponent(subject);
+                const encodedBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodedSubject}&body=${encodedBody}`;
+
+
+                window.open(gmailUrl, '_blank');
+            });
+        </script>
     </div>
 </body>
 
